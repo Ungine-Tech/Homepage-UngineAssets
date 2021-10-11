@@ -3,6 +3,7 @@ import ReactDOM                                    from 'react-dom'
 import { createTheme, MuiThemeProvider} from '@material-ui/core'
 import App                                         from './app'
 import "./style.css"
+import "@fontsource/roboto/400.css"
 
 const theme = createTheme({
 	props: {

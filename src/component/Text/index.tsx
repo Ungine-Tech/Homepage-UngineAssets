@@ -3,6 +3,8 @@ import { Box, createStyles, Divider, makeStyles, Theme, Typography, useTheme } f
 import { config }                                                              from '../../config'
 import classNames                                                              from 'classnames'
 import "./display.css"
+import "@fontsource/lato/100.css"
+import "@fontsource/lato/300.css"
 
 const useStyles = makeStyles((theme:Theme)=>createStyles({
 	root: {

@@ -2,12 +2,12 @@ import { Config } from './index'
 
 export const config:Config = {
 	info: {
-		title: "Example",
-		owner: "ICANN",
-		describe: "A example page.",
-		copyright: "ICANN",
-		url: "https://example.com",
-		beian: "京ICP备000000号"
+		title: "Assets Site",
+		owner: "Ungine",
+		describe: "云骏时代静态资源站点，用于存放静态文件",
+		copyright: "Ungine Times Tech.",
+		url: "https://www.ungine.cn",
+		beian: "琼ICP备2021006880号-1"
 	},
 	style: {
 		displayTitleDivider: false,
