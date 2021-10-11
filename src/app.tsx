@@ -4,17 +4,17 @@ import Text                                                     from './componen
 import { config }                                               from './config'
 import Copyright                                                from './component/Copyright'
 
-const useStyles = makeStyles((theme:Theme)=>createStyles({
+const useStyles = makeStyles( ( theme: Theme ) => createStyles( {
 	root: {
 		fontFamily: '"Lato","Microsoft YaHei UI",sans-serif'
 	}
-}))
+} ) )
 
-export default function App() {
+export default function App () {
 	const theme = useTheme();
-	const classes = useStyles(theme);
+	const classes = useStyles( theme );
 	
-	document.title = config.info.title+" - "+config.info.owner;
+	document.title = config.info.title + " - " + config.info.owner;
 	
 	return (
 		<>

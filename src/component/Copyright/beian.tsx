@@ -3,25 +3,25 @@ import { Box, createStyles, Link, makeStyles, Theme, Typography, useTheme } from
 import { config }                                                           from '../../config'
 import classNames                                                           from 'classnames'
 
-const useStyles = makeStyles((theme:Theme)=>createStyles({
+const useStyles = makeStyles( ( theme: Theme ) => createStyles( {
 	root: {
 		color: "#757575",
-		marginBottom: theme.spacing(0.5)
+		marginBottom: theme.spacing( 0.5 )
 	},
 	text: {
-		letterSpacing: theme.spacing(0.25)
+		letterSpacing: theme.spacing( 0.25 )
 	}
-}))
+} ) )
 
-export default function Beian() {
+export default function Beian () {
 	const beian = config.info.beian;
 	const theme = useTheme();
-	const classes = useStyles(theme);
+	const classes = useStyles( theme );
 	
-	if(beian) {
+	if ( beian ) {
 		return (
 			<Box component={"div"} id={"beian"} className={classes.root}>
-				<Typography component={"p"} variant={"body2"} className={classNames(classes.text)}>
+				<Typography component={"p"} variant={"body2"} className={classNames( classes.text )}>
 					{"备案号："}
 					<Link
 						color={"primary"}

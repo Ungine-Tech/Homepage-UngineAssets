@@ -1,11 +1,11 @@
-import React                          from 'react'
-import ReactDOM                                    from 'react-dom'
-import { createTheme, MuiThemeProvider} from '@material-ui/core'
-import App                                         from './app'
+import React                             from 'react'
+import ReactDOM                          from 'react-dom'
+import { createTheme, MuiThemeProvider } from '@material-ui/core'
+import App                               from './app'
 import "./style.css"
 import "@fontsource/roboto/400.css"
 
-const theme = createTheme({
+const theme = createTheme( {
 	props: {
 		MuiTypography: {
 			variantMapping: {
@@ -22,20 +22,20 @@ const theme = createTheme({
 			},
 		},
 	},
-});
+} );
 
 export interface Config {
 	info: {
-		title:string,
-		owner:string,
-		describe:string,
-		copyright:string,
-		url:string,
-		beian:string
+		title: string,
+		owner: string,
+		describe: string,
+		copyright: string,
+		url: string,
+		beian: string
 	},
 	style: {
-		displayTitleDivider:boolean,
-		dividerLength:string
+		displayTitleDivider: boolean,
+		dividerLength: string
 	}
 }
 
@@ -45,5 +45,5 @@ ReactDOM.render(
 			<App/>
 		</MuiThemeProvider>
 	</React.StrictMode>,
-	document.getElementById('root')
+	document.getElementById( 'root' )
 )

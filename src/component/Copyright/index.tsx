@@ -5,9 +5,9 @@ import dayjs                                                                from
 import { config }                                                           from '../../config'
 import Beian                                                                from './beian'
 
-const useStyles = makeStyles((theme:Theme) => createStyles({
+const useStyles = makeStyles( ( theme: Theme ) => createStyles( {
 	root: {
-		marginTop: theme.spacing(6)
+		marginTop: theme.spacing( 6 )
 	},
 	font: {
 		fontFamily: '"Lato","Microsoft YaHei UI",sans-serif',
@@ -15,24 +15,25 @@ const useStyles = makeStyles((theme:Theme) => createStyles({
 		color: "#7c7c7c"
 	},
 	copyright: {
-		wordSpacing: theme.spacing(0.5)
+		wordSpacing: theme.spacing( 0.5 )
 	}
-}))
+} ) )
 
-export default function Copyright() {
+export default function Copyright () {
 	const theme = useTheme();
-	const classes = useStyles(theme);
+	const classes = useStyles( theme );
 	
 	const year = dayjs().year();
-	const time = (year>2021)?("2021 - "+year):year;
+	const time = (year > 2021) ? ("2021 - " + year) : year;
 	
 	return (
-		<Box component={"footer"} id={"footer"} className={classNames(classes.root,"MuiTypography-alignCenter","MuiTypography-gutterBottom","MuiTypography-displayBlock")}>
+		<Box component={"footer"} id={"footer"}
+		     className={classNames( classes.root, "MuiTypography-alignCenter", "MuiTypography-gutterBottom", "MuiTypography-displayBlock" )}>
 			<Beian/>
-			<Typography variant={"body2"} className={classNames(classes.font,classes.copyright)}>
+			<Typography variant={"body2"} className={classNames( classes.font, classes.copyright )}>
 				{config.info.url && config.info.copyright && (
 					<>
-						{"Copyright © "+time+" "}
+						{"Copyright © " + time + " "}
 						<Link
 							color={"primary"}
 							href={config.info.url}

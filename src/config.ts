@@ -1,6 +1,6 @@
 import { Config } from './index'
 
-export const config:Config = {
+export const config: Config = {
 	info: {
 		title: "Assets Site",
 		owner: "Ungine",
