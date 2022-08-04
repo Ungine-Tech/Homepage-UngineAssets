@@ -22,14 +22,15 @@ jobs:
           cache: yarn
 
       - name: Build react scripts
-        run: yarn install && yarn export
+        run: yarn install && yarn build
         env:
           CI: false
+          GENERATE_SOURCEMAP: false
 
       - name: Upload COS
         uses: jaehue/tencent-cos-action@v0.1.0
         with:
-          args: delete -r -f / && upload -rs out/ /
+          args: delete -r -f / && upload -rs build/ /
           secret_id: ${{ secrets.TENCENT_SECRET_ID }}
           secret_key: ${{ secrets.TENCENT_SECRET_KEY }}
           bucket: home-ungineassets-1307412436
